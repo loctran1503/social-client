@@ -1,0 +1,76 @@
+.wrapper{
+    background-color: white;
+    border-bottom: 1px solid var(--border-gray-color);
+    padding: 16px 0;
+    overflow-x: hidden;
+}
+// Desktop and laptop
+.container{
+ 
+    display: flex;
+    margin: 0 12px;
+    align-items: center;
+    justify-content: space-between;
+    h1{
+        color: black;
+        font-size: 3rem;
+        font-weight: 500;
+        font-family: 'Marck Script',cursive;
+        cursor: pointer;
+        // background: linear-gradient(to right,pink,yellow,blue);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+    }
+    .center{
+        flex: 1;
+        padding: 0 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+.username{
+    background-color: white;
+    border: 1px solid var(--blue-color);
+    color: var(--blue-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+
+
+.mobileContainer{
+    display: flex;
+    margin: 0 12px;
+    align-items: center;
+    justify-content: space-between;
+    h1{
+        color: black;
+        font-size: 3rem;
+        font-weight: 500;
+        font-family: 'Marck Script',cursive;
+        cursor: pointer;
+        // background: linear-gradient(to right,pink,yellow,blue);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+    }
+}
+.mobileContainerBottom{
+    position: fixed;
+    
+    width: 100%;
+    bottom: 0;
+    padding: 16px 24px;
+    background-color: white;
+    border-top: 1px solid var(--border-gray-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mobileBottomIcon{
+    font-size: 2.2rem;
+    color: black
+}

@@ -1,0 +1,111 @@
+.overlay{
+    background-color: var(--background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    
+}
+.container{
+    .top{
+        width: 360px;
+        background-color: white;
+        padding: 12px;
+        border-radius: 2px;
+        border: 1px solid var(--border-gray-color);
+    }
+    .bottom{
+        margin-top: 3px;
+        min-width: 320px;
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 2px;
+        border: 1px solid var(--border-gray-color);
+        font-size: 1.3rem;
+        
+        span{
+            cursor: pointer;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-left: 5px;
+            color: var(--blue-color);
+        }
+    }
+    position: absolute;
+    
+   top: 50%;
+   left: 50%;
+   right: auto;
+   bottom: auto;
+   transform: translate(-50%,-50%);
+        
+}
+.btnOpenAuthenticate{
+    border: 1px solid var(--blue-color);
+    color: var(--blue-color);
+    outline: none;
+    background-color: white;
+    padding: 4px 10px;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    font-weight: 600;
+    
+}
+
+// Login
+.form{
+    padding: 0 6px;
+}
+.closeContainer{
+    text-align: end;
+    .closeIcon{
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 6px;
+    h2{
+        font-weight:600 ;
+    margin: 20px 0;
+    font-size: 3rem;
+    color: black;
+    font-family: 'Marck Script',cursive;
+    }
+    p{
+        font-size: 1.3rem;
+        color: var(--blue-color);
+        font-weight: 700;
+        text-decoration: underline;
+    }
+}
+.btnSubmit{
+    width: 100%;
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 20px;
+}
+.genderTitle{
+    font-weight: 700;
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+    margin-left: 4px;
+}
+.genderContainer{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
