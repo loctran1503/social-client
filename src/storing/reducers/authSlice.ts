@@ -44,7 +44,7 @@ const authSlice = createSlice({
     initialState,
     reducers:{
       setIsLoading(state,action){
-      
+        state.isLoading = action.payload 
       },
     },
     extraReducers:(builder) =>{

@@ -25,7 +25,21 @@ const Authenticate = () => {
   }
   return (
     <>
-    <button className={styles.btnOpenAuthenticate} onClick={openModal}>login / signup</button>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+    <div className={styles.btnOpenAuthenticate} >
+      <button onClick={openModal}>login / signup</button>
+      </div>
     {isModalOpen && <div className={styles.overlay} >
       <div className={styles.container}>
 
@@ -42,18 +56,7 @@ const Authenticate = () => {
           </div>
       </div>
     </div>}
-    <ToastContainer
-        position="top-right"
-        autoClose={2000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+  
     </>
   )
 }

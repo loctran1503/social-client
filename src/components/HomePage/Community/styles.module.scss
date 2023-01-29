@@ -1,0 +1,169 @@
+.container {
+  position: relative;
+  margin: 40px 12px 200px;
+  border-radius: 10px;
+
+  background-color: white;
+  border: 1px solid var(--border-gray-color);
+  .header {
+    text-align: center;
+    padding: 12px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--border-gray-color);
+  }
+  .body {
+    margin-top: 10px;
+  }
+  .senderItem {
+    float: right;
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 20%;
+
+    .senderItemContainer {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      align-items: flex-end;
+      .senderContent {
+        background-color: var(--blue-color);
+        padding: 6px 10px;
+        border-radius: 10px;
+        text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+      .senderImageMessage {
+        width: 50%;
+        height: auto;
+        border-radius: 10px;
+
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+      }
+
+      .senderContentWithImage {
+        width: 50%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+  .receiverItem {
+    margin-right: 20%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    float: left;
+    .receiverItemContainer{
+        display: flex;
+
+  
+
+        .receiverAvatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 6px;
+          }
+          .receiverContent {
+            background-color: #ebe8e8;
+            padding: 6px 10px;
+            border-radius: 10px;
+            text-align: center;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            font-weight: 400;
+          }
+          .receiverImageMessage {
+            width: 50%;
+            height: auto;
+            border-radius: 10px;
+      
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+          .receiverContentWithImage {
+            width: 50%;
+      
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+    }
+    
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid var(--border-gray-color);
+
+    width: 100%;
+    .footerAvatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+    .input {
+      margin-left: 6px;
+      border: 1px solid var(--border-gray-color);
+      flex: 1;
+      font-size: 1.6rem;
+
+      border-radius: 20px;
+      outline: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 12px;
+      .inputAndMedia {
+        img {
+          object-fit: cover;
+          margin-top: 8px;
+          border-radius: 10px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          width: 100px;
+          height: 100px;
+        }
+      }
+      input {
+        outline: none;
+        border: none;
+        height: 100%;
+        font-size: 16px;
+        width: 100%;
+      }
+      .imageToolContainer {
+        position: relative;
+        input {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          opacity: 0;
+        }
+      }
+      .toolIcon {
+        font-size: 1.9rem;
+        color: var(--text-color);
+        margin: 0 10px;
+      }
+    }
+    .btnSend {
+      margin-left: 20px;
+      color: var(--blue-color);
+      font-size: 1.6rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .messageBlockingActive {
+      color: red;
+      width: 38px;
+      text-align: center;
+    }
+  }
+}

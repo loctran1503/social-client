@@ -1,0 +1,244 @@
+.container {
+  margin: 0 12px;
+  margin-top: 40px;
+}
+.postItem {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid var(--border-gray-color);
+  //Header----------------------------------------------
+  .postHeader {
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .onwerContainer {
+      display: flex;
+      align-items: center;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      .onwerInfo {
+        margin-left: 10px;
+        font-size: 1.6rem;
+        h4 {
+          font-weight: 600;
+          color: #333;
+        }
+        p {
+          margin-top: 4px;
+
+          font-size: 1.4rem;
+          color: var(--gray-color);
+        }
+      }
+    }
+    .postController {
+      .faFlag {
+        font-size: 1.8rem;
+        color: var(--text-color);
+      }
+    }
+  }
+  //Body----------------------------------------------
+  .postBody {
+    .content {
+      p {
+        font-size: 1.7rem;
+        padding: 0px 0px 14px 14px;
+      }
+      .postImage {
+        width: 100%;
+        max-height: 600px;
+        height: auto;
+        border-top: 1px solid var(--border-gray-color);
+      }
+    }
+    .interactive {
+      .currentVote {
+        padding: 10px;
+        font-weight: 600;
+        font-size: 1.5rem;
+        border-bottom: 1px solid var(--border-gray-color);
+      }
+      .voteController {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.6rem;
+        font-weight: 600;
+        border-bottom: 1px solid var(--border-gray-color);
+        padding: 12px;
+        .upVote {
+          transition: all 0.25s ease;
+          color: var(--blue-color);
+          cursor: pointer;
+          padding: 4px 12px;
+          border-radius: 20px;
+          text-align: center;
+          &:hover {
+            background-color: var(--blue-less-color);
+          }
+        }
+
+        .downVote {
+          transition: all 0.25s ease;
+          padding: 4px 12px;
+          cursor: pointer;
+          border-radius: 20px;
+          text-align: center;
+          &:hover {
+            background-color: #eeecec;
+          }
+        }
+      }
+    }
+    .commentContainer {
+      .viewAllComment {
+        text-align: center;
+        padding: 12px;
+        font-size: 1.4rem;
+        border-bottom: 1px solid var(--border-gray-color);
+        span {
+          background-color: #ecebeb;
+          color: var(--gray-color);
+          font-weight: 600;
+          border-radius: 20px;
+          padding: 4px 12px;
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+      .commentItem {
+        padding: 10px;
+        border-bottom: 1px solid var(--border-gray-color);
+        &:last-child{
+            border-bottom: none;
+        }
+        .left {
+            display: flex;
+          .commentAvatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+          }
+         
+          .leftBody {
+            padding: 0 12px 12px 12px;
+            .commentUSerNameAndVoteCounting {
+                display: flex;
+                align-items: center;
+                h4{
+                    font-size: 1.5rem;
+              font-weight: 600;
+                }
+                p{
+                    margin-left: 12px;
+                    font-size: 1.4rem;
+                }
+                .upvoteCounting{
+                    margin-left: 20px;
+                    color: var(--blue-color);
+                }
+                .downvoteCounting{
+                    color: var(--red-color);
+                    margin-left: 16px;
+                }
+            }
+            .commentContent{
+
+                margin-top: 6px;
+                p{
+                    font-weight: 400;
+                    font-size: 1.6rem;
+                }
+                .commentContentVoteContainer{
+                    margin-top: 6px;
+                    display: flex;
+                    align-items: center;
+                    p{
+                        font-weight: 600;
+                    font-size: 1.4rem;
+                    }
+                    .commentContentUpVote{
+                        color: var(--blue-color);
+                        &:hover{
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
+                    }
+                    .commentContentDownVote{
+                   
+                      
+                        margin-left: 20px;
+                        &:hover{
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
+                    }
+                    .commentContentTimestamp{
+                        margin-left: 20px;
+                        font-size: 1.3rem;
+                        color: var(--gray-color);
+                    }
+                }
+            }
+          }
+        }
+       
+      }
+    }
+  }
+  //Footer----------------------------------------------
+  .postFooter{
+    border-top: 1px solid var(--border-gray-color);
+    display: flex;
+    align-items: center;
+    height: 48px;
+    .postFooterTool{
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        width: 60px;
+        .postFooterToolImage{
+            cursor: pointer;
+            color: black;
+            font-size: 2.4rem;
+        }
+        input{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+           opacity: 0;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+    }
+    .postFooterInput{
+        
+        flex: 1;
+        input{
+            outline: none;
+        border: none;
+        width: 100%;
+        height: 100%;
+        font-size: 1.6rem;
+   
+            color: var(--text-color);
+        }
+    }
+    .postFooterSendComment{
+        padding: 14px;
+        font-size: 1.6rem;
+        font-weight: 700;
+        cursor: pointer;
+        color: var(--blue-color);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.icon{
+    text-align: center;
+    .iconQuestion{
+        font-size: 2.6rem;
+        color: var(--green-color);
+        cursor: pointer;
+    }
+    p{
+
+        font-weight: 600;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+}
+.modalContainer{
+
+    .header{
+        text-align: end;
+        .closeModalIcon{
+            cursor: pointer;
+            color: #333;
+            font-size: 2rem;
+        }
+    }
+}

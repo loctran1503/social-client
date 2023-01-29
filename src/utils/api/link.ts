@@ -3,19 +3,20 @@
 //const severUrl = "http://localhost:4445/social/api";
   const severUrl = 'https://gentlevn.com/social/api'
 
-//export const socketUrl = "http://localhost:4444/social/api";
- //export const socketUrl ='wss://gentlevn.com/social/api'
+//export const socketUrl = "http://localhost:4445/social/api";
+ export const socketUrl ='wss://gentlevn.com/social/api'
 
-// export const socketLink ={
-//   chats:{
-//     path:"/finance/api/chat/socket.io",
-//     link:`${socketUrl}/chat`
-//   },
-//   coins:{
-//     path:"/finance/api/coins/socket.io",
-//     link:`${socketUrl}/coins`
-//   }
-//  }
+export const socketLink ={
+  chats:{
+    path:"/social/api/chat/socket.io",
+    link:`${socketUrl}/chat`
+  },
+  chatRoom:{
+    path:"/social/api/chat-room/socket.io",
+    link:`${socketUrl}/chat-room`
+  }
+ 
+ }
 
 export const apiLink = {
   users: {
@@ -23,17 +24,16 @@ export const apiLink = {
     login: `${severUrl}/users/login`,
     checkAuth: `${severUrl}/users/checkAuth`,
     logout: `${severUrl}/users/logout`,
-    findAll:`${severUrl}/users/findAll`
-
+    getAllUser:`${severUrl}/users/get-all-user`,
+    
   },
   messages:{
-    findAll:`${severUrl}/messages/findAll`
+    findAll:`${severUrl}/users/findAllCommunityMessage`
   },
-  coins:{
-    convertToUsdt:`${severUrl}/coins/convert-usd-to-usdt`,
-    convertToUsd:`${severUrl}/coins/convert-usdt-to-usd`,
-    buyCoins:`${severUrl}/coins/buy`,
-    sellCoins:`${severUrl}/coins/sell`,
+  chatsRoom:{
+    getOne:`${severUrl}/chat-room/get-one`,
+    getAll:`${severUrl}/chat-room/get-all`,
+    setIsSeen:`${severUrl}/chat-room/is-seen`
   }
 };
 

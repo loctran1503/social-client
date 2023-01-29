@@ -46,7 +46,7 @@
     display: flex;
     margin: 0 12px;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-between;
     h1{
         color: black;
         font-size: 3rem;
@@ -60,7 +60,7 @@
 }
 .mobileContainerBottom{
     position: fixed;
-    
+    z-index: 100;
     width: 100%;
     bottom: 0;
     padding: 16px 24px;
@@ -69,8 +69,72 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 .mobileBottomIcon{
+    cursor: pointer;
     font-size: 2.2rem;
-    color: black
+    color: black;
+    transition: all 0.3s ease;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+
+// Request calling
+.RequestCallingWrapper{
+    position: fixed;
+    z-index: 1000;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .RequestCallingContainer{
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        p{
+            font-weight: 600;
+            margin-top: 6px;
+            font-size: 1.6rem;
+        }
+        .buttonContainer{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 40px;
+            .btnDecline{
+                outline: none;
+                border: none;
+                background-color: var(--red-color);
+                color: white;
+                font-size: 1.6rem;
+                padding: 8px 16px;
+                border-radius: 10px;
+                font-weight: 600;
+            }
+            .btnAccept{
+                outline: none;
+                border: none;
+                background-color: var(--green-color);
+                color: white;
+                font-size: 1.6rem;
+                font-weight: 600;
+                padding: 8px 16px;
+                border-radius: 10px;
+            }
+        }
+    }
+
 }

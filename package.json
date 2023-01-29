@@ -17,11 +17,15 @@
     "@types/react-dom": "^18.0.10",
     "axios": "^1.2.2",
     "clsx": "^1.2.1",
+    "draft-js": "^0.11.7",
+    "draftjs-to-html": "^0.9.1",
     "firebase": "^9.15.0",
     "formik": "^2.2.9",
+    "peerjs": "^1.4.7",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
+    "react-draft-wysiwyg": "^1.15.0",
     "react-infinite-scroll-component": "^6.1.0",
     "react-loader-spinner": "^5.3.4",
     "react-modal": "^3.16.1",
@@ -59,5 +63,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/draft-js": "^0.11.10",
+    "@types/draftjs-to-html": "^0.8.1",
+    "@types/react-draft-wysiwyg": "^1.13.4",
+    "@types/react-modal": "^3.13.1"
   }
 }

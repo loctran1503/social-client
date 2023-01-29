@@ -1,0 +1,361 @@
+.container {
+  margin-top: 40px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid var(--border-gray-color);
+
+  position: relative;
+}
+.notHaveMessage{
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: var(--border-gray-color);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid var(--border-gray-color);
+  .receiverInfo {
+    display: flex;
+    align-items: center;
+  }
+  .callContainer {
+    display: flex;
+    align-items: center;
+  }
+  .backIcon {
+    font-size: 2.2rem;
+    color: #333;
+    cursor: pointer;
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 20px;
+  }
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+}
+.body {
+  .senderItem {
+    margin-left: 20%;
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    float: right;
+
+    .senderContainer {
+      display: flex;
+      justify-content: flex-end;
+      .senderContent {
+        position: relative;
+        word-break: break-all;
+        background-color: var(--blue-color);
+        padding: 6px 10px;
+        border-radius: 10px;
+        text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 400;
+        // Display emoji
+        .senderEmojiImage {
+          position: absolute;
+          top: 56%;
+          left: -14%;
+          width: 24px;
+          height: 24px;
+          background-color: white;
+          padding: 4px;
+          border-radius: 50%;
+        }
+        // Remove message
+      }
+    }
+  }
+  .receiverItem {
+    margin-right: 20%;
+    margin-top: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    float: left;
+    position: relative;
+    .receiverContainer {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      .receiverImageIcon {
+        margin-left: 6px;
+      }
+      .receiverAvatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+      .receiverContent {
+        cursor: pointer;
+        position: relative;
+        word-break: break-all;
+        margin-left: 6px;
+        background-color: var(--gray-less-color);
+        padding: 6px 10px;
+        border-radius: 10px;
+        text-align: center;
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: 400;
+        .receiverEmojiImage {
+          position: absolute;
+          top: 56%;
+          right: -14%;
+          width: 24px;
+          height: 24px;
+          background-color: white;
+          padding: 4px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+.footer {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .senderLoveIcon {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .inputContainer {
+    flex: 1;
+    background-color: var(--gray-less-color);
+    padding: 2px 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+
+    input {
+      flex: 1;
+      outline: none;
+      border: none;
+      font-size: 16px;
+      height: 100%;
+      background-color: var(--gray-less-color);
+      padding: 6px 16px;
+    }
+    .toolContainer {
+      position: relative;
+      margin: 0 16px;
+      .toolIcon {
+        font-size: 1.6rem;
+        color: black;
+      }
+      .uploadImageInput {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+      }
+    }
+  }
+  .btnSend {
+    margin-left: 12px;
+    outline: none;
+    border: none;
+    background-color: white;
+    color: var(--blue-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+}
+
+.callVideoIcon {
+  font-size: 2rem;
+  color: var(--red-color);
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.emojiContainer {
+  position: absolute;
+  top: -150%;
+  left: 10%;
+  z-index: 100;
+  background-color: white;
+  border-radius: 50px;
+  border: 1px solid var(--border-gray-color);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    width: 24px;
+    height: auto;
+    margin: 0 12px;
+  }
+  .emojiCloseIcon {
+    z-index: 100;
+    padding: 4px 6px;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.6rem;
+    background-color: var(--gray-color);
+    cursor: pointer;
+  }
+}
+
+.removed {
+  background-color: var(--gray-less-color) !important;
+  font-weight: 600 !important;
+  color: var(--gray-color) !important;
+}
+
+.imageType {
+  max-width: 60%;
+  height: auto;
+  border-radius: 10px;
+}
+.senderMessageController {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 1px solid var(--border-gray-color);
+  position: absolute;
+  top: -218%;
+  width: 140px;
+  right: 80%;
+  z-index: 100;
+  background-color: white;
+  border-radius: 10px;
+
+  .senderMessageControllerHeader {
+    color: #333;
+    text-align: end;
+    font-size: 2rem;
+    padding: 6px 12px;
+  }
+  .senderMessageControllerBody {
+    p {
+      padding: 6px;
+      border-top: 1px solid var(--border-gray-color);
+      color: black;
+      font-size: 1.6rem;
+      font-weight: 600;
+      &:hover {
+        background-color: var(--gray-less-color);
+      }
+    }
+  }
+}
+
+// Image
+.imageController {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  .imageControllerContent {
+    border-radius: 10px;
+    min-width: 200px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 1px solid var(--border-gray-color);
+    .imageControllerContentHeader {
+      text-align: end;
+      padding: 12px;
+      button {
+        background-color: white;
+        color: var(--red-color);
+        font-weight: 600;
+        outline: none;
+        font-size: 1.8rem;
+        border: none;
+      }
+    }
+    .imageControllerContentBody {
+      p {
+        text-align: center;
+        cursor: pointer;
+        font-size: 1.7rem;
+        font-weight: 600;
+        padding: 12px;
+        border-top: 1px solid var(--border-gray-color);
+        &:hover {
+          background-color: var(--gray-less-color);
+        }
+      }
+    }
+  }
+}
+.imageEmojiContainer {
+  top: -26% !important;
+}
+
+.receiverEmojiImageType {
+  position: absolute;
+  top: 95%;
+  right: 38%;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.callVideoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  .callVideoContent {
+    text-align: center;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: var(--gray-less-color);
+    color: var(--gray-color);
+  }
+  h3 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+  }
+
+  .callVideoIcon {
+    color: var(--gray-color);
+  }
+}
+
+.avatarContainer {
+  position: relative;
+  .userStatus {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    top: 57%;
+    right: 19%;
+  }
+  .online {
+    background-color: var(--green-color);
+  }
+  .offline {
+    background-color: var(--gray-color);
+  }
+}

@@ -1,12 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 
 import authReducer from './reducers/authSlice';
+import localReducer from './reducers/localSlice';
 
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
-  
+    local:localReducer
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({
 		serializableCheck: false})

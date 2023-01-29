@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.4d55cc81.css",
-    "main.js": "/static/js/main.9998ce17.js",
+    "main.css": "/static/css/main.962e87b6.css",
+    "main.js": "/static/js/main.5ccce64d.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/roll-royce.jpg": "/static/media/roll-royce.9fd278d24d38c8ef70f0.jpg",
     "static/media/avatar.png": "/static/media/avatar.082c8bb9fef786605356.png",
     "index.html": "/index.html",
-    "main.4d55cc81.css.map": "/static/css/main.4d55cc81.css.map",
-    "main.9998ce17.js.map": "/static/js/main.9998ce17.js.map",
+    "main.962e87b6.css.map": "/static/css/main.962e87b6.css.map",
+    "main.5ccce64d.js.map": "/static/js/main.5ccce64d.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d55cc81.css",
-    "static/js/main.9998ce17.js"
+    "static/css/main.962e87b6.css",
+    "static/js/main.5ccce64d.js"
   ]
 }
