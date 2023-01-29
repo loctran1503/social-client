@@ -1,8 +1,10 @@
 import React from 'react'
-
+import styles from './styles.module.scss'
 const LiveStreamList = () => {
   return (
-    <div>LiveStreamList</div>
+    <div className={styles.working}>
+      Chức năng đang hoàn thiện
+    </div>
   )
 }
 

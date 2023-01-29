@@ -140,20 +140,20 @@ const Navbar = () => {
                       navigate("/");
                     }}
                     icon={faHouse}
-                    className="mobileBottomIcon"
+                    className="mobileBottomIcon"    
                   />
                   <FontAwesomeIcon
                     onClick={() => {
                       navigate("/all-user");
                     }}
                     icon={faPerson}
-                    className="mobileBottomIcon"
+                    className="mobileBottomIcon"                                                        
                   />
-                  <FontAwesomeIcon
+                  {/* <FontAwesomeIcon
                     icon={faMagnifyingGlass}
                     className="mobileBottomIcon"
-                  />
-                  <FontAwesomeIcon icon={faBell} className="mobileBottomIcon" />
+                  /> */}
+                  {/* <FontAwesomeIcon icon={faBell} className="mobileBottomIcon" /> */}
                   <Messenger />
                 </div>
                 {isAuthenticated ? (
@@ -210,11 +210,11 @@ const Navbar = () => {
                   icon={faPerson}
                   className="mobileBottomIcon"
                 />
-                <FontAwesomeIcon
+                {/* <FontAwesomeIcon
                   icon={faMagnifyingGlass}
                   className="mobileBottomIcon"
                 />
-                <FontAwesomeIcon icon={faBell} className="mobileBottomIcon" />
+                <FontAwesomeIcon icon={faBell} className="mobileBottomIcon" /> */}
                 <Messenger />
               </div>
             </div>

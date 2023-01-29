@@ -9,11 +9,11 @@ import { useAppDispatch, useAppSelector } from "../../../storing/hook";
 import { authSelector } from "../../../storing/reducers/authSlice";
 import {
   localSelector,
-  setChatRoomSocket
+  setChatRoomSocket,
 } from "../../../storing/reducers/localSlice";
 import { ChatRoom, ChatRoomMessage } from "../../../types/db";
 import { getAllChatRoomApi } from "../../../utils/api/chat-room";
-import { socketLink } from "../../../utils/api/link";
+import { clientLink, socketLink } from "../../../utils/api/link";
 import styles from "./styles.module.scss";
 const Messenger = () => {
   const { isAuthenticated, isLoading, accessToken, user } =
@@ -21,7 +21,7 @@ const Messenger = () => {
   const { chatRoomSocket } = useAppSelector(localSelector);
   const dispatch = useAppDispatch();
   const [isOpen, setIsOpen] = useState(false);
-  const [counting,setCounting] = useState(0)
+  const [counting, setCounting] = useState(0);
   const [chatRoomList, setChatRoomList] = useState<ChatRoom[]>([]);
   const openModal = () => {
     if (!isOpen) {
@@ -35,19 +35,21 @@ const Messenger = () => {
   };
 
   const navigate = useNavigate();
-  const location = useLocation()
+  const location = useLocation();
   const handleNavigate = async (userId: string) => {
-    
-    navigate(`/chat-room/${userId}`);
-    closeModal()
-    setCounting(0)
+    // navigate(`/chat-room/${userId}`, {
+    //   replace: true,
+    // });
+    window.location.href = `${clientLink}${userId}`
+    closeModal();
+    setCounting(0);
 
-    if(chatRoomList.length>0){
-      const temp = chatRoomList.map(item => {
-        item.chatRoomMessages[0].isSeen=true
-        return item
-      })
-      setChatRoomList(temp)
+    if (chatRoomList.length > 0) {
+      const temp = chatRoomList.map((item) => {
+        item.chatRoomMessages[0].isSeen = true;
+        return item;
+      });
+      setChatRoomList(temp);
     }
   };
 
@@ -71,11 +73,11 @@ const Messenger = () => {
         const result = await getAllChatRoomApi();
 
         if (result.success && result.chatRooms) {
-          result.chatRooms.forEach(item =>{
-            if(!item.chatRoomMessages[0].isSeen){
-              setCounting(prev => prev+1)
+          result.chatRooms.forEach((item) => {
+            if (!item.chatRoomMessages[0].isSeen) {
+              setCounting((prev) => prev + 1);
             }
-          })
+          });
           setChatRoomList(result.chatRooms);
         }
       };
@@ -86,7 +88,6 @@ const Messenger = () => {
   useEffect(() => {
     if (chatRoomSocket) {
       chatRoomSocket.on("server-send-message", (data: ChatRoomMessage) => {
-     
         if (chatRoomList.length > 0) {
           const temp: ChatRoom[] = chatRoomList.map((item) => {
             if (item.chatroomId === data.chatroom.chatroomId) {
@@ -94,8 +95,8 @@ const Messenger = () => {
             }
             return item;
           });
-          if(!location.pathname.includes("chat-room")){
-            setCounting(prev => prev+1)
+          if (!location.pathname.includes("chat-room")) {
+            setCounting((prev) => prev + 1);
           }
 
           setChatRoomList(temp);
@@ -109,16 +110,15 @@ const Messenger = () => {
             }
             return item;
           });
-       
-          if(!location.pathname.includes("chat-room")){
-            setCounting(prev => prev+1)
+
+          if (!location.pathname.includes("chat-room")) {
+            setCounting((prev) => prev + 1);
           }
           setChatRoomList(temp);
         }
       });
       chatRoomSocket.on("server-send-call-video-stop", (data) => {
-      
-        const newMessage : ChatRoomMessage = data.newMessage;
+        const newMessage: ChatRoomMessage = data.newMessage;
         if (newMessage) {
           const temp: ChatRoom[] = chatRoomList.map((item) => {
             if (item.chatroomId === newMessage.chatroom.chatroomId) {
@@ -126,28 +126,29 @@ const Messenger = () => {
             }
             return item;
           });
-          if(!location.pathname.includes("chat-room")){
-            setCounting(prev => prev+1)
+          if (!location.pathname.includes("chat-room")) {
+            setCounting((prev) => prev + 1);
           }
           setChatRoomList(temp);
         }
       });
     }
-  }, [chatRoomSocket,location]);
+  }, [chatRoomSocket, location]);
 
-  
 
 
   return (
     <div>
       <MediaQuery minWidth={769}></MediaQuery>
       <div className={styles.messengerIconContainer}>
-      <FontAwesomeIcon
-        icon={faComment}
-        className="mobileBottomIcon"
-        onClick={openModal}
-      />
-      {counting>0 && <span className={styles.messageSeenCounting}>{counting}</span>}
+        <FontAwesomeIcon
+          icon={faComment}
+          className="mobileBottomIcon"
+          onClick={openModal}
+        />
+        {counting > 0 && (
+          <span className={styles.messageSeenCounting}>{counting}</span>
+        )}
       </div>
       {isOpen && (
         <>

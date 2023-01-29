@@ -44,9 +44,7 @@ const ChatRoom = () => {
     useState<string | null>(null);
 
   const [isCallVideoOpen, setIsCallVideoOpen] = useState(false);
-  const isMobile = useMediaQuery({
-    query: '(max-width: 768px)'
-  })
+
   
 
   useEffect(() => {
@@ -689,7 +687,7 @@ const ChatRoom = () => {
                         onChange={(e) => handleSendMedia(e)}
                       />
                     </div>
-                    <div className={styles.toolContainer}>
+                    {/* <div className={styles.toolContainer}>
                       <FontAwesomeIcon
                         icon={faMicrophone}
                         className={styles.toolIcon}
@@ -700,7 +698,7 @@ const ChatRoom = () => {
                         icon={faFaceSmile}
                         className={styles.toolIcon}
                       />
-                    </div>
+                    </div> */}
                   </div>
                   <button
                     className={styles.btnSend}

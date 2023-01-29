@@ -26,7 +26,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      {isAuthenticated && <PostCreater/>}
+      {/* {isAuthenticated && <PostCreater/>} */}
     </div>
     <div>
 

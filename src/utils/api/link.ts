@@ -1,4 +1,6 @@
 
+//export const clientLink = 'http://localhost:3000/chat-room/'
+export const clientLink = 'https://social.gentlevn.com/chat-room/'
 
 //const severUrl = "http://localhost:4445/social/api";
   const severUrl = 'https://gentlevn.com/social/api'

@@ -261,10 +261,7 @@ const Community = () => {
                         />
                         <input  type="file" accept="image/*" onChange={e => handleAddImage(e)} />
                       </div>
-                      <FontAwesomeIcon
-                        icon={faMicrophone}
-                        className={styles.toolIcon}
-                      />
+                     
                     </div>
                   </div>
                   <div
